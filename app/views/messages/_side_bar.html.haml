@@ -1,0 +1,22 @@
+.sidebar
+  .slidebar__user-name
+    .top-items
+      .top-items__user
+        hoge
+      
+      .top-items__icons
+        = link_to "https://www.instagram.com/", class: "icons__group" do
+          = icon('far', 'edit',class:"icon__edit")
+          %span<>
+
+        = link_to "https://www.instagram.com/", class: "icons__account-top" do
+          = icon('fa', 'cog',class:"icon__cog")
+          %span<>
+
+  .slidebar__group-list
+    .slidebar__group
+      .list-items__group
+        techcamp
+      .list-items__message
+        まだメッセージがありません
+

@@ -1,0 +1,30 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__header
+      .chat-main__group
+        .chat-main__group-name
+          test
+        .chat-main__member-list
+          Member: masa
+      = link_to "https://www.instagram.com/", class: "chat-main__edit" do
+        Edit
+
+        -# チャット
+  .chat-main__message-list
+    .chat-main__message-box
+      .chat-main__info
+        .chat-main__message-list-name
+          masa
+        .chat-main__message-list-calender
+          2020年6月29日 19時35分
+      .chat-main__message
+        おはよう
+  
+  -# フォーム
+  .chat-main__message-form
+    .form
+      %input.form__text{ placeholder: "type a message", type: "text"}
+      %label{class: "form__image"}
+        = icon('far', 'image')
+        %input.form__image__file{ type:"file"}
+    %input.form__Btn{"name": "commit","type": "submit","value": "Send" }

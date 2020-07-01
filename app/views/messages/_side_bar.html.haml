@@ -1,0 +1,22 @@
+.sidebar
+  .sidebar-header
+    .user-box
+      .user-box__top-user
+        hoge
+      
+      .user-box__icons
+        = link_to "https://www.instagram.com/", class: "user-box__icons--group" do
+          = icon('far', 'edit',class:"icon__edit")
+          %span<>
+
+        = link_to "https://www.instagram.com/", class: "user-box__icons--account" do
+          = icon('fa', 'cog',class:"icon__cog")
+          %span<>
+
+  .sidebar__group-list
+    = link_to "https://www.instagram.com/", class:"sidebar-group"  do
+      .sidebar-group__title
+        techcamp
+      .sidebar-group__message
+        まだメッセージがありません
+

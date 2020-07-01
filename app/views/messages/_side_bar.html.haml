@@ -1,22 +1,22 @@
 .sidebar
-  .slidebar__user-name
-    .top-items
-      .top-items__user
+  .sidebar-header
+    .user-box
+      .user-box__top-user
         hoge
       
-      .top-items__icons
-        = link_to "https://www.instagram.com/", class: "icons__group" do
+      .user-box__icons
+        = link_to "https://www.instagram.com/", class: "user-box__icons--group" do
           = icon('far', 'edit',class:"icon__edit")
           %span<>
 
-        = link_to "https://www.instagram.com/", class: "icons__account-top" do
+        = link_to "https://www.instagram.com/", class: "user-box__icons--account" do
           = icon('fa', 'cog',class:"icon__cog")
           %span<>
 
-  .slidebar__group-list
-    .slidebar__group
-      .list-items__group
+  .sidebar__group-list
+    = link_to "https://www.instagram.com/", class:"sidebar-group"  do
+      .sidebar-group__title
         techcamp
-      .list-items__message
+      .sidebar-group__message
         まだメッセージがありません
 

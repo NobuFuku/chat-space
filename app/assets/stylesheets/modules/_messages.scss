@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 .wrapper{
   display: flex;
   background-color: red;
@@ -12,78 +11,74 @@
   width: 300px;
   height: 100vh;
   background-color:green;
+
+  .sidebar-header{
+    width: 300px;
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    
+    .user-box{
+      margin-left: 20px;
+      width: 260px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      
+      &__top-user{
+        color: white;
+        font-size: 16px;
+      }
+      
+      &__icons{
+        width: 60px;
+        height: 20px;
+        display: flex;
+        justify-content: end;
+        position: relative;
+        
+        &--group{
+          color: #ffffff;
+          position: absolute;
+          margin-left: 15px;
+        }
+
+        &--account{
+          color: #ffffff;
+          position: absolute;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+
+  &__group-list{
+    width: 300px;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px;
+
+    .sidebar-group{
+      box-sizing: border-box;
+      text-decoration: none;
+      color: white;
+      box-sizing: border-box;
+      padding: 0 0 40px 0;
+      display: block;
+
+      &__title{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      &__message{
+        font-size: 11px;
+      }
+    }
+  }   
 }
-
-.slidebar__user-name{
-  width: 300px;
-  height: 100px;
-  background-color: #253141;
-  display: flex;
-  align-items: center;
-}
-
-.top-items{
-  margin-left: 20px;
-  width: 260px;
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  
-}
-
-.top-items__user{
-  color: white;
-  font-size: 16px;
-
-}
-
-.top-items__icons{
-  width: 60px;
-  height: 20px;
-  display: flex;
-  justify-content: space-around;
-  
-
-}
-
-.icons__group{
-  color: #ffffff;
-  float: right;
-
-}
-
-.icons__account-top{
-  color: #ffffff;
-  float: right;
-}
-
-
-.slidebar__group-list{
-  width: 300px;
-  height: calc(100vh - 100px);
-  background-color: #2f3e51;
-  padding: 0 20px;
-  overflow: scroll;
-}
-
-
-.slidebar__group{
-  width: 260px;
-  box-sizing: border-box;
-  padding: 20px 0 40px;
-}
-
-.list-items__group{
-  color: white;
-  font-size: 15px;
-}
-
-.list-items__message{
-  
-  color: white;
-  font-size: 11px;
-}
-
 
 
 // チャットヘッダー
@@ -92,135 +87,128 @@
   width: calc(100vw - 300px);
   height: 100vh;
   background-color: yellow;
-}
 
-.chat-main__group-info{
-  width: calc(100vw - 300px);
-  height: 100px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.chat-main__header{
-  height: 100px;
-    padding: 0 40px;
-    border-bottom: solid 1px #eee;
-    display: flex;
-    justify-content: space-between;
-}
-
-.chat-main__group{
-  display: block;
-  
-}
-.chat-main__group-name{
-  color: #333;
-  font-size: 20px;
-  margin-top: 35px;  
-}
-
-.chat-main__member-list{
-  color: #999999;
-  font-size: 12px;
-  margin-top: 15px;
-}
-
-.chat-main__edit{
-  display: block;
-  border: 1px solid #38AEF0;
-  color: #38AEF0;
-  height: 40px;
-  line-height: 40px;
-  margin-top: 28px;
-  padding: 0 20px;
-  text-decoration: none;
-}
-
-// チャットメイン
-.chat-main__message-list{
-  width: calc(100vw - 300px);
-  height: calc(100vh - 190px);
-  background-color: #fafafa;
-}
-
-.chat-main__message-box{
-  margin-left: 40px;
-  display: block;
-}
-
-.chat-main__info{
-  display: flex;
-  
-}
-
-.chat-main__message-list-name{
-  font-size: 16px;
-  color: #333333;
-  margin-top: 35px;
-}
-
-.chat-main__message-list-calender{
-  font-size: 12px;
-  color: #999999;
-  margin-top: 35px;
-  
-}
-
-.chat-main__message{
-  font-size: 14px;
-  color: #434A54;
-  margin-top: 12px;
-}
-
-
-// チャットフッター
-.chat-main__message-form{
-  width: calc(100vw - 300px);
-  height: 90px;
-  background-color: #d2d2d2;
-  box-sizing: border-box;
-  padding: 20px 0px 20px 0px;
-}
-
-.chat-main__message-form{
-  width: 100%;
-  height: 90px;
-  background-color: #d2d2d2;
-  padding: 20px 40px ;
-  display: flex;
-  justify-content:space-between ;
-
-  .form{
-    width: 100%;
-    display: flex;
-    background-color: white;
-    position: relative;
-
-    &__text{
-      width: 100%;
-      padding-left: 10px;
-      border: none;
-    }
-
-    &__image {
-      position: absolute;
-      right: 10px;
-      line-height: 50px;
-      font-size: 25px;
-
-      &__file{
-      display: none;
+  &__header{
+    width: calc(100vw - 300px);
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    
+    .Board-box{
+      height: 100px;
+      padding: 0 40px;
+      border-bottom: solid 1px #eee;
+      display: flex;
+      justify-content: space-between;
+      
+      &__group{
+        display: block;
+        
       }
+        &__group-name{
+          color: #333;
+          font-size: 20px;
+          margin-top: 35px;  
+        }
+        
+    
+        &__member-list{
+          color: #999999;
+          font-size: 12px;
+          margin-top: 15px;
+        }
+    }
+    .chat-main__edit{
+      display: block;
+      border: 1px solid #38AEF0;
+      color: #38AEF0;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      text-decoration: none;
     }
   }
-  .form__Btn{
-    background-color: #38AEF0;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    height: 50px;
-    margin-left: 15px;
-    padding: 0 30px;
-    width: 100px;
+
+  // チャットメイン
+  .chat-main__message-list{
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    box-sizing: border-box;
+    padding: 35px 40px 0;
+    overflow: scroll;
+  
+    .message-box{
+      box-sizing: border-box;
+      margin-bottom: 46px;
+      
+      .message-info{
+        box-sizing: border-box;
+        
+        .message-list-name{
+          font-size: 16px;
+          color: #333333;
+          display: flex;
+          
+          &__calender{
+            font-size: 12px;
+            color: #999999;
+            margin-left: 10px;
+          }
+        }
+      
+        .message-text{
+          font-size: 14px;
+          color: #434A54;
+          margin-top: 12px;
+          display: block;
+        }
+      }   
+    }
+  }
+
+  // チャットフッター
+  .chat-main__message-form{
+    width: 100%;
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px ;
+    display: flex;
+    justify-content:space-between ;
+
+    .form{
+      width: 100%;
+      display: flex;
+      background-color: white;
+      position: relative;
+
+      &__text{
+        width: 100%;
+        padding-left: 10px;
+        border: none;
+      }
+
+      &__image {
+        position: absolute;
+        right: 10px;
+        line-height: 50px;
+        font-size: 25px;
+
+        &__file{
+        display: none;
+        }
+      }
+    }
+    .form__Btn{
+      background-color: #38AEF0;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      width: 100px;
+    }
   }
 }

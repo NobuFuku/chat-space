@@ -1,24 +1,24 @@
 .chat-main
-  .chat-main__group-info
-    .chat-main__header
-      .chat-main__group
-        .chat-main__group-name
+  .chat-main__header
+    .Board-box
+      .Board-box__group
+        .Board-box__group-name
           test
-        .chat-main__member-list
+        .Board-box__member-list
           Member: masa
       = link_to "https://www.instagram.com/", class: "chat-main__edit" do
         Edit
 
         -# チャット
   .chat-main__message-list
-    .chat-main__message-box
-      .chat-main__info
-        .chat-main__message-list-name
+    .message-box
+      .message-info
+        .message-list-name
           masa
-        .chat-main__message-list-calender
-          2020年6月29日 19時35分
-      .chat-main__message
-        おはよう
+          .message-list-name__calender
+            2020年6月29日 19時35分
+        .message-text
+          おはよう
   
   -# フォーム
   .chat-main__message-form

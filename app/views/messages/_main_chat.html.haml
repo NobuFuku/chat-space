@@ -2,29 +2,40 @@
   .chat-main__header
     .Board-box
       .Board-box__group
-        .Board-box__group-name
-          test
+        = @group.name
         .Board-box__member-list
-          Member: masa
-      = link_to "https://www.instagram.com/", class: "chat-main__edit" do
+          Member:
+          - @group.users.each do |user|
+            = user.name
+
+      = link_to edit_group_path(@group), class: "chat-main__edit" do
         Edit
 
         -# チャット
   .chat-main__message-list
+    = render @messages
     .message-box
       .message-info
         .message-list-name
-          masa
           .message-list-name__calender
-            2020年6月29日 19時35分
-        .message-text
-          おはよう
+        .message
   
   -# フォーム
-  .chat-main__message-form
-    .form
-      %input.form__text{ placeholder: "type a message", type: "text"}
-      %label{class: "form__image"}
-        = icon('far', 'image')
-        %input.form__image__file{ type:"file"}
-    %input.form__Btn{"name": "commit","type": "submit","value": "Send" }
+  .chat-main__footer
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .form-contents
+        =f.text_field :content, class: 'form-contents__text', placeholder: "type a message"
+        =f.label :image, class: "form-contents__image" do
+          = icon('far', 'image')
+          = f.file_field :image,class: 'form-contents__image__file'
+      = f.submit 'Send', class: 'form__Btn'
+
+-# 最初に記載
+-#   .chat-main__message-form
+-#     .form
+-#       .form__contents
+-#         %input.form__text{ placeholder: "type a message", type: "text"}
+-#         %label{class: "form__image"}
+-#           = icon('far', 'image')
+-#           %input.form__image__file{ type:"file"}
+-#       %input.form__Btn{"name": "commit","type": "submit","value": "Send" }

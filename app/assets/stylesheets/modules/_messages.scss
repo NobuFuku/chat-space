@@ -4,7 +4,7 @@
 
 .wrapper{
   display: flex;
-  background-color: red;
+  background-color: white;
 }
 
 .sidebar{
@@ -71,13 +71,18 @@
       &__title{
         font-size: 15px;
         margin-bottom: 5px;
+        color: white;
       }
 
       &__message{
         font-size: 11px;
+        color: white;
       }
     }
   }   
+}
+a{
+  text-decoration: none;
 }
 
 
@@ -103,7 +108,7 @@
       
       &__group{
         display: block;
-        
+        margin-top: 35px;
       }
         &__group-name{
           color: #333;
@@ -145,7 +150,7 @@
       
       .message-info{
         box-sizing: border-box;
-        
+
         .message-list-name{
           font-size: 16px;
           color: #333333;
@@ -156,59 +161,70 @@
             color: #999999;
             margin-left: 10px;
           }
-        }
-      
-        .message-text{
-          font-size: 14px;
-          color: #434A54;
+        }      
+        .message{
           margin-top: 12px;
-          display: block;
-        }
-      }   
+          &__content {
+            color: #434a54;
+            font-size: 14px;
+          }
+          &__image{
+            height:300px;
+          }
+        } 
+      } 
+      
     }
   }
 
   // チャットフッター
-  .chat-main__message-form{
+  .chat-main__footer{
     width: 100%;
     height: 90px;
     background-color: #d2d2d2;
-    padding: 20px 40px ;
+    box-sizing: border-box;
+    padding: 20px 50px 20px 40px;
     display: flex;
     justify-content:space-between ;
-
+  
     .form{
       width: 100%;
       display: flex;
-      background-color: white;
-      position: relative;
+      justify-content: space-around;
 
-      &__text{
+      .form-contents{
         width: 100%;
-        padding-left: 10px;
-        border: none;
-      }
+        background-color: white;
+        position: relative;
+        padding: 0px 45px 0px 15px;
 
-      &__image {
-        position: absolute;
-        right: 10px;
-        line-height: 50px;
-        font-size: 25px;
+        &__text{
+          width: 100%;
+          height: 50px;
+          border: none;
+          box-sizing: border-box;
+        }
 
-        &__file{
-        display: none;
+        &__image {
+          position: absolute;
+          right: 10px;
+          line-height: 50px;
+          font-size: 25px;
+
+          &__file{
+          display: none;
+          }
         }
       }
-    }
-    .form__Btn{
-      background-color: #38AEF0;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-      width: 100px;
+      .form__Btn{
+        background-color: #38AEF0;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
     }
   }
 }

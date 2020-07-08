@@ -7,7 +7,7 @@ $(function(){
           <div class="message-list-name">
             ${message.user_name}
           </div>
-          <div        class="message-list-name__calender">
+          <div class="message-list-name__calender">
             ${message.created_at}
           </div>
         </div>
@@ -56,7 +56,7 @@ $(function(){
       let html = buildHTML(data)
       $('.MessageField').append(html);      
       $('form')[0].reset();
-      $('form__Btn').prop('disabled', false);
+      $('.form__Btn').prop('disabled', false);
       $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
     })
     .fail(function() {

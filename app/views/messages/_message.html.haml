@@ -1,3 +1,4 @@
+.MessageBox{data: {message: {id: message.id}}}
 .message-box
   .message-info
     .message-list-name
@@ -9,5 +10,3 @@
       %p.message__content
         = message.content
     = image_tag message.image.url, class: 'message__image' if message.image.present?
-
-
